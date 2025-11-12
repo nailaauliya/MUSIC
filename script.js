@@ -1,8 +1,7 @@
-// Ambil semua elemen lagu dari daftar
+
 const songItems = document.querySelectorAll(".lists ul li");
 const player = document.querySelector(".player");
 
-// Buat elemen informasi lagu di player
 const songInfo = document.createElement("div");
 songInfo.classList.add("song-info");
 songInfo.innerHTML = `
@@ -14,14 +13,12 @@ songInfo.innerHTML = `
 `;
 player.prepend(songInfo);
 
-// Buat elemen audio player
 const audio = document.createElement("audio");
 audio.id = "audio-player";
 audio.controls = true;
 audio.style.width = "300px";
 player.appendChild(audio);
 
-// Data lagu sesuai dengan yang ada di index.html
 const songData = {
   "'Cause You Have To – LANY": {
     src: "songs/cause-you-have-to.mp3",
@@ -65,7 +62,6 @@ const songData = {
   }
 };
 
-// Event klik untuk setiap lagu
 songItems.forEach((item) => {
   item.addEventListener("click", () => {
     const title = item.querySelector("p").textContent.trim();
