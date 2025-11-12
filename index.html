@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-player.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">🎧</h2>
+      <nav>
+        <ul>
+          <li class="active">Discover</li>
+          <li>Genre</li>
+          <li>Top Charts</li>
+          <li>Podcast</li>
+        </ul>
+      </nav>
+
+      <h3 class="library-title">Library</h3>
+      <ul class="library">
+        <li>Favourites</li>
+        <li>Playlist</li>
+      </ul>
+
+      <div class="profile">
+        <img src="musiccover1.jpg" alt="Profile">
+        <p>Naila is Online</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <section class="header">
+        <h1>WHAT’S NEW?</h1>
+        <p class="subtitle">
+          Some songs you just hear, but some... you feel. This is where every beat tells a story
+          for quiet nights, rainy afternoons, or those moments when you just wanna pause the world and listen.
+        </p>
+      </section>
+
+ <section class="albums">
+  <h2>Top Album</h2>
+  <div class="album-list">
+    <div class="album-card">
+      <img src="bp - Copy.jpg" alt="album cover">
+      <p>Born Pink – BLACKPINK</p>
+    </div>
+    <div class="album-card">
+      <img src="rosie.jpg" alt="album cover">
+      <p>Number One Girl – ROSE</p>
+    </div>
+    <div class="album-card">
+      <img src="aespa.png" alt="album cover">
+      <p>Rich man – Aespa</p>
+    </div>
+    <div class="album-card">
+      <img src="lany.jpg" alt="album cover">
+      <p>'Cause You Have To' – LANY</p>
+    </div>
+    <div class="album-card">
+      <img src="cortiz.jpg" alt="album cover">
+      <p>GO! – cortiz</p>
+    </div>
+  </div>
+</section>
+
+      <section class="lists">
+  <div class="latest">
+    <h3>Latest Album</h3>
+    <ul>
+      <li>
+        <img src="rosie.jpg" alt="cover">
+        <p>number one girl – ROSE</p>
+      </li>
+      <li>
+        <img src="rosie.jpg" alt="cover">
+        <p>3AM – ROSE</p>
+      </li>
+      <li>
+        <img src="cortiz.jpg" alt="cover">
+        <p>GO! – CORTIZ</p>
+      </li>
+      <li>
+        <img src="bp - Copy.jpg" alt="cover">
+        <p>JUMP – Blackpink</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="latest">
+    <h3>Latest Singles</h3>
+    <ul>
+      <li>
+        <img src="lany.jpg" alt="cover">
+        <p>'Cause You Have To – LANY</p>
+      </li>
+      <li>
+        <img src="rosie.jpg" alt="cover">
+        <p>drink or coffe – ROSE</p>
+      </li>
+      <li>
+        <img src="aespa.png" alt="cover">
+        <p>Rich Man – aespa</p>
+      </li>
+      <li>
+        <img src="lany.jpg" alt="cover">
+        <p>XXL – LANY</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <!-- Music Player Bar -->
+      <footer class="player">
+
+      <div class="music-player">
+  <div class="controls">
+    <div class="buttons">
+      <button id="prev">⏮️</button>
+      <button id="play">▶️</button>
+      <button id="next">⏭️</button>
+    </div>
+    <input type="range" id="progress" value="0" />
+    <audio id="audio" src="number1rose.m4a"></audio>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
