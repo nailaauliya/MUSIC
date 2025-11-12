@@ -28,7 +28,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* ini yang bikin bagian bawah turun */
+  justify-content: space-between; 
 }
 
 .sidebar h2.logo {
@@ -85,7 +85,6 @@ body {
   object-fit: cover;
 }
 
-/* MAIN */
 .main {
   flex: 1;
   padding: 30px 40px;
@@ -157,8 +156,8 @@ body {
 .lists {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px; /* biar lebih rapat ke atas */
-  gap: 20px; /* jarak antar kolom lebih deket */
+  margin-top: 25px; 
+  gap: 20px; 
 }
 .lists .latest {
   flex: 1;
