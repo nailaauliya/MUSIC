@@ -1,7 +1,8 @@
-// Ambil semua elemen lagu
+// Ambil semua elemen lagu dari daftar
 const songItems = document.querySelectorAll(".lists ul li");
 const player = document.querySelector(".player");
 
+// Buat elemen informasi lagu di player
 const songInfo = document.createElement("div");
 songInfo.classList.add("song-info");
 songInfo.innerHTML = `
@@ -13,57 +14,58 @@ songInfo.innerHTML = `
 `;
 player.prepend(songInfo);
 
+// Buat elemen audio player
 const audio = document.createElement("audio");
 audio.id = "audio-player";
 audio.controls = true;
 audio.style.width = "300px";
 player.appendChild(audio);
 
-
+// Data lagu sesuai dengan yang ada di index.html
 const songData = {
-  "number one girl – ROSE": {
-    src: "songs/number-one-girl.mp3",
-    cover: "img/rosie.jpg",
-    lyric: "Your one and only<br>So what's it gon' take for you to want me?<br>I'd give it all up if you told me that I'd be<br>The number one girl in your eyes"
+  "'Cause You Have To – LANY": {
+    src: "songs/cause-you-have-to.mp3",
+    cover: "img/lany.jpg",
+    lyric: "I still see your face in every crowd<br>Cause you have to, but I don’t know how<br>Even when we’re miles apart<br>Your name’s still written on my heart."
   },
-  "3AM – ROSE": {
-    src: "songs/3am.mp3",
+  "Stay a little longger – ROSE": {
+    src: "songs/stay-a-little-longer.mp3",
     cover: "img/rosie.jpg",
-    lyric: "Late night thoughts, I'm still awake<br>Counting stars until the day breaks"
+    lyric: "Stay a little longer, don’t fade away<br>Let the night take us where hearts wanna stay<br>Every word you say feels like home<br>So please, don’t let me go."
   },
-  "GO! – CORTIZ": {
+  "GO! – CORTIS": {
     src: "songs/go.mp3",
     cover: "img/cortiz.jpg",
-    lyric: "Run and chase it, don’t ever slow<br>Keep it wild, just let it go"
+    lyric: "Run and chase it, don’t ever slow<br>Keep it wild, just let it go<br>The world’s too small for dreams this big<br>We’re born to move, not to dig."
   },
   "JUMP – Blackpink": {
     src: "songs/jump.mp3",
     cover: "img/bp.jpg",
-    lyric: "Jump high, don’t look down<br>We’re the queens, wearing the crown"
-  },
-  "'Cause You Have To – LANY": {
-    src: "songs/cause-you-have-to.mp3",
-    cover: "img/lany.jpg",
-    lyric: "I still see your face in every crowd<br>Cause you have to, but I don’t know how"
-  },
-  "drink or coffe – ROSE": {
-    src: "songs/drink-or-coffee.mp3",
-    cover: "img/rosie.jpg",
-    lyric: "Coffee cups and rainy nights<br>Still thinking of you under city lights"
-  },
-  "Rich Man – aespa": {
-    src: "songs/rich-man.mp3",
-    cover: "img/aespa.png",
-    lyric: "Money talks, but love’s the sound<br>I keep my feet on solid ground"
+    lyric: "Jump high, don’t look down<br>We’re the queens wearing the crown<br>Feel the rhythm, feel the beat<br>We own the night, we own the street."
   },
   "XXL – LANY": {
     src: "songs/xxl.mp3",
     cover: "img/lany.jpg",
-    lyric: "Dreams too big, hearts too wide<br>We’re living loud, no need to hide"
+    lyric: "Dreams too big, hearts too wide<br>We’re living loud, no need to hide<br>Every night feels like a show<br>We go XXL, we glow."
+  },
+  "drink or coffe – ROSE": {
+    src: "songs/drink-or-coffee.mp3",
+    cover: "img/rosie.jpg",
+    lyric: "Coffee cups and rainy nights<br>Still thinking of you under city lights<br>Every sip reminds me of you<br>What’s bitter feels too true."
+  },
+  "Angel #48 – aespa": {
+    src: "songs/angel48.mp3",
+    cover: "img/aespa.png",
+    lyric: "I’m your angel number forty-eight<br>Falling slow but never late<br>Wings of glass and silver skies<br>I’ll lift you up where freedom lies."
+  },
+  "Super Far – LANY": {
+    src: "songs/super-far.mp3",
+    cover: "img/lany2.jpg",
+    lyric: "I’m super far from where we started<br>But you still live where my heart is<br>Every step I take away<br>Feels like running in replay."
   }
 };
 
-// Event klik lagu
+// Event klik untuk setiap lagu
 songItems.forEach((item) => {
   item.addEventListener("click", () => {
     const title = item.querySelector("p").textContent.trim();
@@ -75,6 +77,8 @@ songItems.forEach((item) => {
       document.getElementById("lyrics").innerHTML = data.lyric;
       audio.src = data.src;
       audio.play();
+    } else {
+      console.log("Lagu tidak ditemukan:", title);
     }
   });
 });
